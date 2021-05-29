@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+:root{
+    --p5:5px;
+}
+
+body{
+    background-image: url(./tulip.jpg);
+    /*background-position: center;*/
+    /*background-size: cover;
+    background-repeat: no-repeat;*/
+}
+
+header{
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.3);
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter:blur(5px) ;/*ponerle como borrosito*/
+    border-radius:5px;
+    margin: var(--p5);/*colocar variable, es lo mismo*/
+
+}
+
+ul{
+    margin: 10px;
+    list-style: none;/*quitarle los puntitos*/
+}
+
+nav a{/*todos los elementos que esten dentro de a*/
+    text-decoration: none;/*quitarle el subrayado*/
+    color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    display:block;/*para que cuando le pase el cursor se le ponga un fondo*/
+    padding-right: 15px;
+}
+
+nav a:hover{
+    cursor:pointer;
+    color: white;
+    background-color: rgb(240, 194, 173);
+    border-radius: var(--p5);
+    box-shadow: 0 3px 5px 2px rgba(202, 255, 10, 0.5);
+}
+
+nav > ul{
+    display: flex;
+    position: relative;/*para despues posicionar los elementos del alumnos*/
+}
+
+nav ul ul {
+    position: absolute;
+    display: none;/*para que se oculten */
+    top: 17px;
+}
+
+.n1:hover ul{/*si le paso el mouse a n1 que haré con mis ul*/
+    display: block; /*que aparezca lo que oculté, que regrese a la normalidad*/
+    background-color:rgba(255, 255, 255, 0.5) ;
+    border-radius: var(--p5) ;
+    border: 1px solid rgba(255,255,255,0.7);
+}
